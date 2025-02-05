@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Statistiques
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center my-4">Statistiques Générales</h1>
+
+    <div class="row">
+        <!-- Section Statistiques Utilisateurs -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    Utilisateurs
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i class="fas fa-users"></i> Nombre total de clients : <strong>{{ total_clients }}</strong>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-tools"></i> Nombre total de mécaniciens : <strong>{{ total_mechanics }}</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Statistiques Rendez-vous -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    Rendez-vous
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        {% for status, count in rendezvous_by_status.items %}
+                        <li class="list-group-item">
+                            <i class="fas fa-calendar-check"></i> {{ status|title }} : <strong>{{ count }}</strong>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Statistiques Véhicules et Paiements -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-warning text-white">
+                    Véhicules
+                </div>
+                <div class="card-body">
+                    <p><i class="fas fa-car"></i> Nombre total de véhicules : <strong>{{ total_vehicles }}</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-danger text-white">
+                    Paiements
+                </div>
+                <div class="card-body">
+                    <p><i class="fas fa-dollar-sign"></i> Total des paiements : <strong>{{ total_paiements }} CAD</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
