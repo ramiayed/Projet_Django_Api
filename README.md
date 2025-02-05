@@ -5,7 +5,8 @@ Ce projet a pour but de développer une solution complète de gestion des rendez
 
 1.1 Objectif du Projet
 
-  	L'objectif de ce projet est de développer un système back-end performant et sécurisé permettant de :
+	L'objectif de ce projet est de développer un système back-end performant et sécurisé permettant de :
+ 
 -	Gérer l'inscription, l'authentification et les permissions des utilisateurs (Clients et Mécaniciens).
 -	Permettre aux clients de prendre des rendez-vous pour la réparation de leurs véhicules avec un mécanicien.
 -	Gérer les factures associées aux rendez-vous.
