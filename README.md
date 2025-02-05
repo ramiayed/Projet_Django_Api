@@ -1,1 +1,2 @@
 # Projet_Django_Api
+Ce projet a pour but de développer une solution complète de gestion des rendez-vous pour un atelier de réparation de véhicules, permettant une interaction fluide entre les clients et les mécaniciens. Le système inclut l'inscription, l'authentification et la gestion des permissions des utilisateurs, la gestion des rendez-vous, ainsi que l'édition des factures. Une attention particulière est portée sur la sécurité des données et l’accessibilité via une API REST documentée avec Swagger.
